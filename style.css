@@ -438,7 +438,7 @@ a:hover { color: var(--accent-deep); }
 /* 7. Grid Kartu (Keahlian & Portofolio) */
 .card-grid { display: grid; gap: 20px; }
 .card-grid--3 { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
-.card-grid--2 { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+.card-grid--2 { grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); }
 .card-grid--auto { grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); }
 
 .card-grid > li { display: flex; }
@@ -738,6 +738,111 @@ textarea.form-control { resize: vertical; }
 
 .footer-links { display: flex; gap: 18px; }
 .footer-links a { font-weight: 600; }
+
+/* 10b. Layanan */
+.service-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.check-list {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 16px;
+  font-size: 13.5px;
+}
+
+.check-list li {
+  position: relative;
+  padding-left: 28px;
+  color: var(--text);
+}
+
+.check-list li::before {
+  content: "\2713";
+  position: absolute;
+  left: 0;
+  top: 2px;
+  display: grid;
+  place-items: center;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--accent-soft);
+  color: var(--accent-deep);
+  font-size: 11px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.service-card .skills-list { margin-bottom: 18px; }
+.service-card .card-actions { margin-top: auto; }
+
+/* 10c. Kontak */
+.contact-address { font-style: normal; } /* <address> italic secara bawaan */
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr));
+  gap: 16px;
+}
+
+.contact-grid > li { display: flex; }
+
+.contact-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+  padding: 18px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: var(--shadow-sm);
+  color: var(--ink);
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+a.contact-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 20px -3px rgba(0, 0, 0, 0.08);
+  border-color: var(--accent-light);
+  color: var(--ink);
+}
+
+.contact-icon {
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  border-radius: var(--radius-md);
+  background: linear-gradient(135deg, var(--accent-strong) 0%, var(--accent) 100%);
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 800;
+  box-shadow: 0 4px 10px rgba(2, 132, 199, 0.3);
+}
+
+.contact-body { min-width: 0; }
+
+.contact-label {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--muted);
+}
+
+.contact-value {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink);
+  overflow-wrap: anywhere;
+}
 
 /* 11. Responsif */
 @media (max-width: 768px) {
