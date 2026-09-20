@@ -1,6 +1,4 @@
-# ppw-2026-week2-12S24017
-
-# ppw-2026-week2-12S24017
+git# ppw-2026-week2-12S24017
 
 Halaman portofolio profesional (single page) **Arya Pratama Sinambela**, mahasiswa S1 Sistem Informasi Institut Teknologi Del. Dibuat untuk **Tugas Mandiri Praktikum Minggu 02** mata kuliah Pemrograman dan Pengujian Aplikasi Web (12S3101): *Pengembangan Halaman Web Portofolio & Layanan Interaktif Accessible Berbasis HTML5 dan Modern CSS*.
 
