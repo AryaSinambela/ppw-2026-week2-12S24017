@@ -902,107 +902,6 @@ select.form-control option { color: var(--ink); }
 .service-card .skills-list { margin-bottom: 22px; }
 .service-card .card-actions { margin-top: auto; }
 
-/* 10c. Kontak */
-.contact-address { font-style: normal; } /* <address> italic secara bawaan */
-
-.contact-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(360px, 100%), 1fr));
-  gap: 16px;
-}
-
-.contact-grid > li { display: flex; }
-
-.contact-card {
-  position: relative;
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  width: 100%;
-  padding: 18px 20px;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-card);
-  color: var(--ink);
-  text-decoration: none;
-}
-
-/* Kartu tautan: bisa diklik, ada panah di kanan */
-a.contact-card {
-  padding-right: 52px;
-  box-shadow: var(--shadow-sm);
-  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
-}
-
-a.contact-card::after {
-  content: "";
-  position: absolute;
-  right: 20px;
-  top: calc(50% - 9px);
-  width: 18px;
-  height: 18px;
-  background-color: var(--muted);
-  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M7 17 17 7'/%3E%3Cpath d='M8 7h9v9'/%3E%3C/svg%3E") center / contain no-repeat;
-  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M7 17 17 7'/%3E%3Cpath d='M8 7h9v9'/%3E%3C/svg%3E") center / contain no-repeat;
-  transition: background-color 0.2s ease, transform 0.2s ease;
-}
-
-a.contact-card:hover {
-  transform: translateY(-3px);
-  box-shadow: var(--shadow-md);
-  border-color: var(--accent-light);
-  color: var(--ink);
-}
-
-a.contact-card:hover::after {
-  background-color: var(--accent-strong);
-  transform: translate(3px, -3px);
-}
-
-/* Kartu informasi (bukan tautan): datar dan garis putus-putus */
-p.contact-card {
-  background: transparent;
-  border: 1.5px dashed var(--border-strong);
-  box-shadow: none;
-}
-
-.contact-icon {
-  flex-shrink: 0;
-  display: grid;
-  place-items: center;
-  width: 48px;
-  height: 48px;
-  border-radius: var(--radius-md);
-  background: linear-gradient(135deg, var(--accent-strong) 0%, var(--accent) 100%);
-  color: #ffffff;
-  font-size: 14px;
-  font-weight: 800;
-  box-shadow: 0 6px 14px -6px rgba(2, 132, 199, 0.6);
-}
-
-p.contact-card .contact-icon {
-  background: var(--accent-soft);
-  color: var(--accent-deep);
-  box-shadow: none;
-}
-
-.contact-body { min-width: 0; }
-
-.contact-label {
-  display: block;
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--muted);
-}
-
-.contact-value {
-  display: block;
-  font-size: 15px;
-  font-weight: 700;
-  color: var(--ink);
-  overflow-wrap: anywhere;
-}
-
 /* 11. Responsif */
 @media (max-width: 768px) {
   /* Header tidak sticky; menu jadi satu baris yang bisa digeser */
@@ -1058,8 +957,6 @@ p.contact-card .contact-icon {
   .info-panel { padding: 20px; }
   .card-actions { flex-wrap: wrap; }
   .card-actions .btn { flex: 1 1 140px; }
-  .contact-card { padding: 16px; }
-  a.contact-card { padding-right: 46px; }
   .choice-list .choice { flex: 1 1 100%; }
 }
 
@@ -1068,8 +965,7 @@ p.contact-card .contact-icon {
     animation: none !important;
     transition: none !important;
   }
-  .project-card:has(.project-link):hover,
-  a.contact-card:hover { transform: none; }
+  .project-card:has(.project-link):hover { transform: none; }
 }
 
 /* =========================================================
