@@ -60,15 +60,6 @@ Hanya ada satu `<h1>`. Judulnya disembunyikan visual dengan kelas `.sr-only`, ka
 - **Tabel Riwayat** memakai `<caption>`, `<thead>`, `<tbody>`, `<tfoot>`, `scope="col"` untuk judul kolom, dan `scope="row"` untuk nama proyek. Pembungkusnya `.table-wrap` (`overflow-x: auto`) supaya tabel bisa digeser di layar kecil.
 - **List:** `<ul>` (tag keahlian, daftar sertifikasi), `<ol>` (pendidikan dan alur layanan), dan `<dl>` (info singkat).
 
-<!-- 📸 SCREENSHOT 2 — LETAKKAN DI SINI
-     Isi: bagian Galeri Keahlian + Portofolio Karya (kartu proyek)
-     Simpan sebagai: screenshots/02-keahlian-portofolio.png -->
-![Galeri keahlian dan portofolio karya](screenshots/02-keahlian-portofolio.png)
-
-<!-- 📸 SCREENSHOT 3 — LETAKKAN DI SINI
-     Isi: tabel Riwayat Proyek & Pengalaman beserta daftar pendidikan
-     Simpan sebagai: screenshots/03-tabel-riwayat.png -->
-![Tabel riwayat proyek](screenshots/03-tabel-riwayat.png)
 
 ### 3. Fitur Layanan
 
@@ -88,10 +79,6 @@ Setiap kartu layanan (`.service-card`) berisi deskripsi, daftar cakupan (`.check
 
 CSS-nya: `.service-card` memakai flexbox kolom dan `.card-actions { margin-top: auto }`, sehingga tombol selalu rata di dasar kartu walaupun panjang teksnya berbeda. Tanda centang pada `.check-list` dibuat dengan `::before` sehingga tidak perlu gambar.
 
-<!-- 📸 SCREENSHOT 4 — LETAKKAN DI SINI
-     Isi: bagian Layanan yang Ditawarkan (4 kartu)
-     Simpan sebagai: screenshots/04-layanan.png -->
-![Bagian layanan yang ditawarkan](screenshots/04-layanan.png)
 
 ### 4. Formulir Layanan
 
