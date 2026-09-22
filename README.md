@@ -3,12 +3,8 @@ git# ppw-2026-week2-12S24017
 Halaman portofolio profesional (single page) **Arya Pratama Sinambela**, mahasiswa S1 Sistem Informasi Institut Teknologi Del. Dibuat untuk **Tugas Mandiri Praktikum Minggu 02** mata kuliah Pemrograman dan Pengujian Aplikasi Web (12S3101): *Pengembangan Halaman Web Portofolio & Layanan Interaktif Accessible Berbasis HTML5 dan Modern CSS*.
 
 🔗 **Demo live:** https://aryasinambela.github.io/ppw-2026-week2-12S24017/
-📁 **Repositori:** https://github.com/AryaSinambela/ppw-2026-week2-12S24017
 
-<!-- 📸 SCREENSHOT 1 — LETAKKAN DI SINI
-     Isi: tampilan desktop bagian atas (header + Tentang Saya + kartu profil + Info Singkat)
-     Simpan sebagai: screenshots/01-desktop-beranda.png -->
-![Tampilan desktop halaman utama](screenshots/01-desktop-beranda.png)
+📁 **Repositori:** https://github.com/AryaSinambela/ppw-2026-week2-12S24017
 
 ## Fitur
 
@@ -105,16 +101,6 @@ CSS-nya: `.service-card` memakai flexbox kolom dan `.card-actions { margin-top: 
 - **Validasi native:** `required`, `type="email"`, `pattern` pada telepon, `min`/`max` pada angka, dan `minlength` pada pesan. Kolom yang tidak valid mendapat border merah lewat `:user-invalid`.
 - **Pengiriman:** GitHub Pages tidak punya server, jadi `action="mailto:..."` dipakai dan formulir akan membuka aplikasi email dengan isi yang sudah terisi.
 
-<!-- 📸 SCREENSHOT 5 — LETAKKAN DI SINI
-     Isi: Formulir Layanan lengkap + panel Alur Layanan di sampingnya
-     Simpan sebagai: screenshots/05-formulir.png -->
-![Formulir layanan](screenshots/05-formulir.png)
-
-<!-- 📸 SCREENSHOT 6 — LETAKKAN DI SINI
-     Isi: formulir saat validasi gagal (klik kirim dalam keadaan kosong, tampak pesan/border merah)
-     Simpan sebagai: screenshots/06-validasi-formulir.png -->
-![Validasi formulir](screenshots/06-validasi-formulir.png)
-
 ### 5. Fitur Kontak
 
 Kanal kontak dibungkus `<address>` berisi `<ul class="contact-grid">`. Empat kartu pertama adalah tautan penuh (`mailto:`, `wa.me`, LinkedIn, GitHub), sedangkan Domisili dan Kampus hanya informasi (`<p>`, bukan tautan). Ikon berupa teks singkat dengan `aria-hidden="true"`, sehingga pembaca layar hanya membaca label dan nilainya.
@@ -124,11 +110,6 @@ CSS-nya:
 - `.contact-address { font-style: normal }` menghilangkan italic bawaan `<address>`.
 - `grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr))` membuat kartu menyusun diri otomatis tanpa media query dan tidak melebar di layar kecil.
 - Kartu berupa tautan mendapat efek hover (naik 4px, bayangan, border aksen), dan efek ini dimatikan di mobile serta saat pengguna memilih `prefers-reduced-motion`.
-
-<!-- 📸 SCREENSHOT 7 — LETAKKAN DI SINI
-     Isi: bagian Hubungi Saya (kartu kontak) + footer
-     Simpan sebagai: screenshots/07-kontak.png -->
-![Bagian kontak](screenshots/07-kontak.png)
 
 ### 6. CSS (`style.css`)
 
@@ -156,11 +137,6 @@ CSS-nya:
 
 **Responsif.** Di bawah 768px, grid dua kolom (Tentang dan Formulir) menjadi satu kolom, header tidak lagi *sticky*, dan padding diperkecil.
 
-<!-- 📸 SCREENSHOT 8 — LETAKKAN DI SINI
-     Isi: tampilan mobile (DevTools → Toggle Device Emulation, lebar 375px), idealnya 2–3 potongan
-     Simpan sebagai: screenshots/08-mobile.png -->
-![Tampilan mobile](screenshots/08-mobile.png)
-
 ## Pemenuhan Rubrik
 
 | Komponen | Bobot | Implementasi |
@@ -170,16 +146,3 @@ CSS-nya:
 | Form & Aksesibilitas | 20% | 3 `fieldset`, 8 tipe kontrol, `label for`, `required`, `aria-describedby` |
 | Estetika & CSS Modern | 25% | Flexbox/Grid, 60-30-10, `border-radius`, `box-shadow`, transisi hover, `@media` |
 | Git & Deployment | 20% | Repositori `ppw-2026-week2-12S24017`, README ini, GitHub Pages |
-
-<!-- 📸 SCREENSHOT 9 (opsional) — LETAKKAN DI SINI
-     Isi: hasil Lighthouse (DevTools → Lighthouse → Accessibility) sebagai bukti aksesibilitas
-     Simpan sebagai: screenshots/09-lighthouse.png -->
-![Skor Lighthouse](screenshots/09-lighthouse.png)
-
-## Sumber Konten
-
-Isi halaman disusun dari CV dan profil GitHub [AryaSinambela](https://github.com/AryaSinambela).
-
-## Lisensi
-
-Dirilis di bawah lisensi [MIT](LICENSE).
