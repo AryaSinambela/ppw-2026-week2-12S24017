@@ -24,7 +24,7 @@ h1, h2 { font-weight: 800; }
 h3, h4, h5, h6 { font-weight: 700; }
 h2 { color: var(--navy); font-size: clamp(1.5rem, 3vw, 2.1rem); margin-bottom: 1.4rem; }
 h3.h4 { color: var(--navy); }
-section[id] { scroll-margin-top: 64px; }
+section[id] { scroll-margin-top: 72px; }
 address p { margin-bottom: .4rem; }
 
 /* 2. Navbar */
@@ -34,10 +34,11 @@ address p { margin-bottom: .4rem; }
   --bs-navbar-active-color: #fff;
   --bs-navbar-brand-color: var(--navy);
   --bs-navbar-brand-hover-color: var(--navy);
-  background: rgba(246, 245, 241, .92);
-  backdrop-filter: blur(8px);
+    background: var(--paper);               /* solid, konten tidak tembus */
   border-bottom: 1px solid var(--line);
+  box-shadow: 0 2px 12px rgba(43, 37, 84, .08);
 }
+
 .navbar-del .navbar-brand { font-weight: 800; }
 .navbar-del .navbar-brand span { color: var(--amber); }
 .navbar-del .navbar-nav .nav-link {

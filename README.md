@@ -34,6 +34,15 @@ Refactoring halaman portofolio Minggu 2 (HTML5 + CSS murni) menjadi Bootstrap 5.
 | Tema | Variabel CSS di `style.css` | Variabel yang sama + override variabel Bootstrap (`--bs-*`) |
 | Ukuran CSS | ±150 baris CSS penuh | Bootstrap + ±140 baris override |
 
+## Screenshot
+
+| Desktop | Mobile (navbar terbuka) |
+|---|---|
+| ![Desktop](screenshots/desktop.png) | ![Mobile](screenshots/mobile.png) |
+| Grid & Modal | Formulir & Validasi |
+| ![Modal](screenshots/modal.png) | ![Form](screenshots/form.png) |
+
+git add README.md screenshots/
 ## Struktur Folder
 
 ```
