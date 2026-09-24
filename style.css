@@ -46,7 +46,35 @@ address p { margin-bottom: .4rem; }
   transition: background-color .2s ease, color .2s ease;
 }
 .navbar-del .navbar-nav .nav-link:hover { background: #ebe8de; }
-.navbar-del .navbar-nav .nav-link.active { background: var(--navy); }
+/* Menu aktif: di mobile pakai latar biasa, di desktop pakai pil yang meluncur */
+.navbar-del .navbar-nav .nav-link.active { background: var(--navy); animation: navPop .35s ease; }
+
+@keyframes navPop {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
+
+#mainNavbar { position: relative; }
+
+.nav-pill {
+  display: none;
+  position: absolute; top: 0; left: 0;
+  width: 0; height: 0; opacity: 0;
+  border-radius: 999px;
+  background: var(--navy);
+  pointer-events: none;
+  transition: transform .4s cubic-bezier(.4, 0, .2, 1),
+              width .4s cubic-bezier(.4, 0, .2, 1),
+              height .4s cubic-bezier(.4, 0, .2, 1),
+              opacity .2s ease;
+}
+
+@media (min-width: 992px) {
+  .nav-pill { display: block; }
+  .navbar-del .navbar-nav .nav-link { position: relative; z-index: 1; }
+  .navbar-del .navbar-nav .nav-link.active { background: transparent; } /* latar diganti pil */
+}
 
 /* 3. Hero */
 .hero { overflow-x: clip; }
@@ -148,5 +176,10 @@ footer a:hover { color: var(--amber); }
 
 @media (prefers-reduced-motion: reduce) {
   .card-del, .btn-del, .btn-del-outline { transition: none; }
+  .card-del:is(:hover, :focus-within), .btn-del:hover, .btn-del-outline:hover { transform: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .card-del, .btn-del, .btn-del-outline, .nav-pill { transition: none; }
+  .navbar-del .navbar-nav .nav-link.active { animation: none; }
   .card-del:is(:hover, :focus-within), .btn-del:hover, .btn-del-outline:hover { transform: none; }
 }
