@@ -13,7 +13,7 @@
   <!-- Custom CSS: WAJIB dimuat setelah Bootstrap -->
   <link href="style.css" rel="stylesheet">
 </head>
-<body data-bs-spy="scroll" data-bs-target="#mainNavbar" data-bs-root-margin="-20% 0px -70% 0px" tabindex="0">
+<body>
 
 <header class="sticky-top">
   <nav class="navbar navbar-expand-lg navbar-del py-2" aria-label="Navigasi utama">
@@ -267,17 +267,44 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script>
 
-/* ===== Pil navigasi yang meluncur mengikuti menu aktif (dua arah) ===== */
+/* ===== Navigasi aktif + pil: deteksi posisi scroll sendiri (semua menu terbaca) ===== */
 const navHost = document.getElementById('mainNavbar');
+const navLinks = [...navHost.querySelectorAll('.nav-link')];
+const navSections = navLinks.map(l => document.querySelector(l.getAttribute('href')));
 const pill = document.createElement('span');
 pill.className = 'nav-pill';
 pill.setAttribute('aria-hidden', 'true');
 navHost.prepend(pill);
 
-function movePill() {
-  const active = navHost.querySelector('.nav-link.active');
-  if (!active || !navHost.offsetWidth) return;
-  const a = active.getBoundingClientRect();
+let activeLink = null;  // menu yang sedang aktif
+let clicked = null;     // menu tujuan bila berpindah lewat klik
+let current = null;     // menu yang sedang berstatus kuning
+let ready = false;      // hindari kedip kuning saat halaman pertama dimuat
+let ticking = false;
+let settleTimer;
+
+function sectionIndex() {
+  // Sudah mentok di dasar halaman → menu terakhir (Kontak)
+  if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4) {
+    return navSections.length - 1;
+  }
+  let idx = 0;
+  navSections.forEach((s, i) => { if (s.getBoundingClientRect().top <= 120) idx = i; });
+  return idx;
+}
+
+function setActive(link) {
+  navLinks.forEach(l => {
+    l.classList.toggle('active', l === link);
+    if (l === link) l.setAttribute('aria-current', 'true'); else l.removeAttribute('aria-current');
+  });
+  activeLink = link;
+}
+
+function movePill(link) {
+  const el = link || activeLink;
+  if (!el || !navHost.offsetWidth) return;
+  const a = el.getBoundingClientRect();
   const h = navHost.getBoundingClientRect();
   pill.style.opacity = 1;
   pill.style.width = a.width + 'px';
@@ -285,10 +312,63 @@ function movePill() {
   pill.style.transform = `translate(${a.left - h.left}px, ${a.top - h.top}px)`;
 }
 
-document.addEventListener('activate.bs.scrollspy', movePill); // maju & mundur saat scroll
-window.addEventListener('resize', movePill);
-window.addEventListener('load', movePill);
-document.fonts.ready.then(movePill); // hitung ulang setelah font Poppins selesai dimuat
+function setGoing(link) {            // sedang berpindah → kuning
+  current?.classList.remove('is-going');
+  current = link;
+  link.classList.add('is-going');
+  navHost.classList.add('is-traveling');
+  pill.classList.add('is-going');
+  movePill(link);
+}
+
+function settle() {                  // sudah sampai → biru
+  clearTimeout(settleTimer);
+  current?.classList.remove('is-going');
+  current = clicked = null;
+  navHost.classList.remove('is-traveling');
+  pill.classList.remove('is-going');
+  movePill();
+}
+
+const settleIn = ms => { clearTimeout(settleTimer); settleTimer = setTimeout(settle, ms); };
+
+function update() {
+  ticking = false;
+  const link = navLinks[sectionIndex()];
+  if (link === activeLink) return;
+  setActive(link);
+  if (!ready) return movePill();
+  if (clicked) {                     // mode klik: pil tetap di tujuan sampai tiba
+    if (link === clicked) settle();
+    return;
+  }
+  setGoing(link);                    // mode scroll manual: pil ikut berpindah
+  settleIn(300);
+}
+
+/* Klik menu → langsung kuning di menu tujuan */
+navLinks.forEach(link =>
+  link.addEventListener('click', () => {
+    if (link === activeLink) return;
+    clicked = link;
+    setGoing(link);
+    settleIn(800);                   // cadangan bila scroll tidak terjadi
+  }));
+
+/* Scroll (ke bawah maupun ke atas) */
+window.addEventListener('scroll', () => {
+  if (!ticking) { ticking = true; requestAnimationFrame(update); }
+  if (current) settleIn(clicked ? 200 : 300);
+}, { passive: true });
+
+window.addEventListener('resize', () => movePill());
+window.addEventListener('load', () => {
+  setActive(navLinks[sectionIndex()]);
+  movePill();
+  setTimeout(() => (ready = true), 600);
+});
+document.fonts.ready.then(() => movePill());
+
 
 /* ===== Data proyek → kartu grid + modal detail ===== */
 const projects = [

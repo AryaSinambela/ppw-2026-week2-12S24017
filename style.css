@@ -174,10 +174,46 @@ footer { background: var(--navy); color: #dcd9ee; font-size: .88rem; }
 footer a { color: inherit; transition: color .2s ease; }
 footer a:hover { color: var(--amber); }
 
-@media (prefers-reduced-motion: reduce) {
-  .card-del, .btn-del, .btn-del-outline { transition: none; }
-  .card-del:is(:hover, :focus-within), .btn-del:hover, .btn-del-outline:hover { transform: none; }
+/* ===== Status navigasi: biru = sedang di sini, kuning = sedang menuju ===== */
+:root {
+  --nav-active: var(--navy);
+  --nav-going: var(--amber);
+  --nav-active-text: #fff;   /* teks di menu biru */
+  --nav-going-text: #000;    /* teks di menu kuning */
 }
+
+.nav-pill {
+  background: var(--nav-active);
+  transition: transform .4s cubic-bezier(.4, 0, .2, 1),
+              width .4s cubic-bezier(.4, 0, .2, 1),
+              height .4s cubic-bezier(.4, 0, .2, 1),
+              opacity .2s ease,
+              background-color .3s ease;
+}
+.nav-pill.is-going { background: var(--nav-going); }
+
+/* Saat menuju bagian lain: menu lama dibersihkan, menu tujuan berteks gelap */
+#mainNavbar.is-traveling .navbar-nav .nav-link.active:not(.is-going) {
+  background: transparent;
+  color: var(--bs-navbar-color);
+}
+#mainNavbar .navbar-nav .nav-link.active   { color: var(--nav-active-text); }  /* biru → putih */
+#mainNavbar .navbar-nav .nav-link.is-going { color: var(--nav-going-text); }   /* kuning → hitam */
+
+@media (min-width: 992px) {
+  /* hover tidak boleh menutupi pil kuning */
+  #mainNavbar .navbar-nav .nav-link.is-going:hover {
+    background: transparent;
+    color: var(--nav-going-text);
+  }
+}
+
+/* Mobile (tanpa pil): warnanya langsung di latar link */
+@media (max-width: 991.98px) {
+  .navbar-del .navbar-nav .nav-link.active { background: var(--nav-active); }
+  #mainNavbar .navbar-nav .nav-link.is-going { background: var(--nav-going); }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .card-del, .btn-del, .btn-del-outline, .nav-pill { transition: none; }
   .navbar-del .navbar-nav .nav-link.active { animation: none; }
