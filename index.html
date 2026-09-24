@@ -1,348 +1,252 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Arya Pratama Sinambela | Portofolio</title>
-<meta name="description" content="Portofolio Arya Pratama Sinambela, mahasiswa Sistem Informasi Institut Teknologi Del.">
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Arya Pratama Sinambela | Portofolio</title>
+  <meta name="description" content="Portofolio Arya Pratama Sinambela, mahasiswa Sistem Informasi Institut Teknologi Del.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Bootstrap 5.3.3 + Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <!-- Custom CSS: WAJIB dimuat setelah Bootstrap -->
+  <link href="style.css" rel="stylesheet">
 </head>
-<body>
+<body data-bs-spy="scroll" data-bs-target="#mainNavbar" data-bs-root-margin="-20% 0px -70% 0px" tabindex="0">
 
-<!-- Header / Navigasi -->
 <header>
-  <div class="container nav">
-    <a class="logo" href="#beranda">Arya<span>.</span>Sinambela</a>
-    <nav>
-      <ul>
-        <li><a href="#beranda" class="active">Beranda</a></li>
-        <li><a href="#pendidikan">Pendidikan</a></li>
-        <li><a href="#resume">Resume</a></li>
-        <li><a href="#layanan">Layanan</a></li>
-        <li><a href="#proyek">Proyek</a></li>
-        <li><a href="#kontak">Kontak</a></li>
-      </ul>
-    </nav>
-  </div>
+  <nav class="navbar navbar-expand-lg navbar-del sticky-top py-2" aria-label="Navigasi utama">
+    <div class="container">
+      <a class="navbar-brand" href="#beranda">Arya<span>.</span>Sinambela</a>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+              aria-controls="mainNavbar" aria-expanded="false" aria-label="Buka menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="navbar-nav ms-auto gap-lg-1">
+          <li class="nav-item"><a class="nav-link" href="#beranda">Beranda</a></li>
+          <li class="nav-item"><a class="nav-link" href="#pendidikan">Pendidikan</a></li>
+          <li class="nav-item"><a class="nav-link" href="#resume">Resume</a></li>
+          <li class="nav-item"><a class="nav-link" href="#layanan">Layanan</a></li>
+          <li class="nav-item"><a class="nav-link" href="#proyek">Proyek</a></li>
+          <li class="nav-item"><a class="nav-link" href="#kontak">Kontak</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 </header>
 
 <main>
 
-  <!-- 1. BERANDA -->
-  <section id="beranda" class="hero" style="padding-top: 2rem;">
-    <div class="container hero-grid">
-      <div>
-        <span class="eyebrow">Halo, saya</span>
-        <h1><em>Arya Pratama</em> Sinambela</h1>
-        <p class="role">Mahasiswa Sistem Informasi · Institut Teknologi Del</p>
-        <p>Saya tertarik pada pertemuan antara kebutuhan bisnis dan solusi teknologi. Saya terbiasa menganalisis sistem yang ada, menemukan titik masalahnya, lalu merancang solusi digital yang meningkatkan efisiensi dan pengalaman pengguna, mulai dari menyusun SRS, evaluasi UI/UX, sampai implementasi Java OOP dan basis data.</p>
-        <div class="btns">
-          <a class="btn primary" href="#proyek">Lihat Proyek</a>
-          <a class="btn ghost" href="Arya_Pratama_Sinambela_CV.pdf" target="_blank" rel="noopener">Unduh CV</a>
+  <!-- BERANDA: Hero + Keahlian -->
+  <section id="beranda" class="hero py-5">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-7 order-2 order-lg-1">
+          <span class="badge rounded-pill eyebrow mb-2">Halo, saya</span>
+          <h1><em>Arya Pratama</em> Sinambela</h1>
+          <p class="role my-2">Mahasiswa Sistem Informasi · Institut Teknologi Del</p>
+          <p>Saya tertarik pada pertemuan antara kebutuhan bisnis dan solusi teknologi. Saya terbiasa menganalisis sistem yang ada, menemukan titik masalahnya, lalu merancang solusi digital yang meningkatkan efisiensi dan pengalaman pengguna, mulai dari menyusun SRS, evaluasi UI/UX, sampai implementasi Java OOP dan basis data.</p>
+          <div class="d-flex flex-wrap gap-2 mt-4">
+            <a class="btn btn-del px-4" href="#proyek"><i class="bi bi-grid me-1"></i> Lihat Proyek</a>
+            <a class="btn btn-del-outline px-4" href="Arya_Pratama_Sinambela_CV.pdf" target="_blank" rel="noopener"><i class="bi bi-download me-1"></i> Unduh CV</a>
+          </div>
+        </div>
+        <div class="col-lg-5 order-1 order-lg-2 text-center">
+          <div class="photo"><img src="Foto_Profile.jpeg" alt="Foto Arya Pratama Sinambela"></div>
         </div>
       </div>
-      <div class="photo">
-        <img src="Foto_Profile.jpeg" alt="Foto Arya Pratama Sinambela">
+
+      <div class="row row-cols-1 row-cols-md-3 g-4 mt-4">
+        <div class="col"><div class="card card-del h-100"><div class="card-body">
+          <h3 class="h6 card-title">💻 Backend &amp; Basis Data</h3>
+          <p class="card-text">Aplikasi Java berbasis OOP dan skema database relasional yang rapi.</p>
+          <div class="d-flex flex-wrap gap-1"><span class="badge rounded-pill badge-tech">Java</span><span class="badge rounded-pill badge-tech">SQL</span><span class="badge rounded-pill badge-tech">PostgreSQL</span></div>
+        </div></div></div>
+        <div class="col"><div class="card card-del h-100"><div class="card-body">
+          <h3 class="h6 card-title">🧩 Analisis &amp; Perancangan Sistem</h3>
+          <p class="card-text">Menerjemahkan kebutuhan pengguna menjadi spesifikasi dan model sistem.</p>
+          <div class="d-flex flex-wrap gap-1"><span class="badge rounded-pill badge-tech">SyRS</span><span class="badge rounded-pill badge-tech">BPMN</span><span class="badge rounded-pill badge-tech">DFD &amp; ERD</span></div>
+        </div></div></div>
+        <div class="col"><div class="card card-del h-100"><div class="card-body">
+          <h3 class="h6 card-title">🎨 UI/UX &amp; Multimedia</h3>
+          <p class="card-text">Wireframe, prototipe interaktif, serta aset visual dan video.</p>
+          <div class="d-flex flex-wrap gap-1"><span class="badge rounded-pill badge-tech">Figma</span><span class="badge rounded-pill badge-tech">Canva</span><span class="badge rounded-pill badge-tech">CapCut</span></div>
+        </div></div></div>
       </div>
     </div>
   </section>
 
-  <!-- Keahlian Singkat di Beranda -->
-  <section>
-    <div class="container">
-      <span class="eyebrow">Keahlian</span>
-      <h2>Yang saya kerjakan</h2>
-      <div class="grid">
-        <div class="card lift"><h3>💻 Backend &amp; Basis Data</h3><p>Aplikasi Java berbasis OOP dan skema database relasional yang rapi.</p>
-          <div class="tags"><span class="tag">Java</span><span class="tag">SQL</span><span class="tag">PostgreSQL</span><span class="tag">pgAdmin 4</span></div></div>
-        <div class="card lift"><h3>🧩 Analisis &amp; Perancangan Sistem</h3><p>Menerjemahkan kebutuhan pengguna menjadi spesifikasi dan model sistem.</p>
-          <div class="tags"><span class="tag">SyRS</span><span class="tag">Use Case</span><span class="tag">BPMN</span><span class="tag">DFD &amp; ERD</span></div></div>
-        <div class="card lift"><h3>🎨 UI/UX &amp; Multimedia</h3><p>Wireframe, prototipe interaktif, serta aset visual dan video.</p>
-          <div class="tags"><span class="tag">Figma</span><span class="tag">CSS</span><span class="tag">Canva</span><span class="tag">CapCut</span></div></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Karya Terbaru di Beranda -->
-  <section>
-    <div class="container">
-      <span class="eyebrow">Proyek Pilihan</span>
-      <h2>Karya terbaru</h2>
-      <div class="grid">
-        <a class="card" href="#titikmu"><div class="thumb">🚌</div><h3>TitikMu</h3><p>Business plan dan desain produk aplikasi tiket transportasi darat &amp; air Sumatera Utara.</p><div class="tags"><span class="tag">Figma</span><span class="tag">Business Plan</span></div></a>
-        <a class="card" href="#antony-mart"><div class="thumb">🛒</div><h3>Antony Mart SyRS</h3><p>Transformasi digital sistem pemesanan manual menjadi sistem terspesifikasi lengkap.</p><div class="tags"><span class="tag">Use Case</span><span class="tag">DFD</span><span class="tag">ERD</span></div></a>
-        <a class="card" href="#academic-record"><div class="thumb">🎓</div><h3>Academic Record Management</h3><p>Sistem catatan akademik Java OOP dengan validasi dan perhitungan IPK.</p><div class="tags"><span class="tag">Java</span><span class="tag">OOP</span></div></a>
-      </div>
-    </div>
-  </section>
-
-  <!-- 2. PENDIDIKAN -->
-  <div class="page-head" id="pendidikan" style="margin-top: 2rem;">
-    <div class="container">
-      <h1>Pendidikan</h1>
-      <p>Perjalanan akademik saya sejauh ini.</p>
-    </div>
-  </div>
-
-  <section>
+  <!-- PENDIDIKAN -->
+  <section id="pendidikan" class="pb-5">
+    <div class="page-head"><div class="container"><h2>Pendidikan</h2><p class="mb-0">Perjalanan akademik saya sejauh ini.</p></div></div>
     <div class="container">
       <div class="timeline">
         <div class="tl-item">
           <span class="tl-date">Sep 2024 – Sekarang (estimasi lulus Okt 2028)</span>
-          <h3>Institut Teknologi Del</h3>
+          <h3 class="h6">Institut Teknologi Del</h3>
           <p class="sub">S1 Sistem Informasi · Toba, Sumatera Utara · IPK 3.10 / 4.00</p>
-          <ul>
-            <li>Fokus pada pengembangan perangkat lunak (Java OOP), manajemen basis data, dan UI/UX.</li>
-            <li>Aktif di Badan Eksekutif Mahasiswa (divisi Multimedia) dan Paduan Suara Mahasiswa.</li>
-          </ul>
-          <div class="tags">
-            <span class="tag">Pemrograman Berorientasi Objek</span><span class="tag">Basis Data Lanjut</span>
-            <span class="tag">Analisis &amp; Perancangan Sistem</span><span class="tag">Manajemen Proyek SI</span><span class="tag">Aljabar Linier</span>
-          </div>
+          <p class="small mb-2">Fokus pada pengembangan perangkat lunak (Java OOP), manajemen basis data, dan UI/UX. Aktif di BEM (divisi Multimedia) dan Paduan Suara Mahasiswa.</p>
+          <div class="d-flex flex-wrap gap-1"><span class="badge rounded-pill badge-tech">PBO</span><span class="badge rounded-pill badge-tech">Basis Data Lanjut</span><span class="badge rounded-pill badge-tech">Analisis &amp; Perancangan Sistem</span><span class="badge rounded-pill badge-tech">Manajemen Proyek SI</span><span class="badge rounded-pill badge-tech">Aljabar Linier</span></div>
         </div>
         <div class="tl-item">
           <span class="tl-date">Jul 2021 – Jun 2024</span>
-          <h3>SMA Negeri 4 Pematangsiantar</h3>
-          <p class="sub">Jurusan Ilmu Pengetahuan Alam (IPA)</p>
+          <h3 class="h6">SMA Negeri 4 Pematangsiantar</h3>
+          <p class="sub mb-0">Jurusan Ilmu Pengetahuan Alam (IPA)</p>
         </div>
       </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="container">
-      <h2>Sertifikat &amp; Pelatihan</h2>
-      <div class="grid">
-        <div class="card"><h3>Microsoft Excel Certification Preparation Program</h3><p>2025</p></div>
-        <div class="card"><h3>Certificate of Completion: Intro to Data Analyst</h3><p>2026</p></div>
+      <h3 class="h4 mt-5 mb-3">Sertifikat &amp; Pelatihan</h3>
+      <div class="row row-cols-1 row-cols-md-2 g-4">
+        <div class="col"><div class="card card-del h-100"><div class="card-body"><h4 class="h6 card-title"><i class="bi bi-award me-1"></i> Microsoft Excel Certification Preparation Program</h4><p class="card-text mb-0">2025</p></div></div></div>
+        <div class="col"><div class="card card-del h-100"><div class="card-body"><h4 class="h6 card-title"><i class="bi bi-award me-1"></i> Certificate of Completion: Intro to Data Analyst</h4><p class="card-text mb-0">2026</p></div></div></div>
       </div>
     </div>
   </section>
 
-  <!-- 3. RESUME -->
-  <div class="page-head" id="resume">
-    <div class="container">
-      <h1>Resume</h1>
-      <p>Pengalaman proyek, organisasi, dan keterampilan.</p>
-      <div class="btns"><a class="btn primary" href="Arya_Pratama_Sinambela_CV.pdf" target="_blank" rel="noopener" style="position:relative;z-index:1;background:var(--amber);border-color:var(--amber);color:var(--ink)">⬇ Unduh CV (PDF)</a></div>
+  <!-- RESUME -->
+  <section id="resume" class="pb-5">
+    <div class="page-head">
+      <div class="container">
+        <h2>Resume</h2><p>Pengalaman proyek, organisasi, dan keterampilan.</p>
+        <a class="btn btn-amber" href="Arya_Pratama_Sinambela_CV.pdf" target="_blank" rel="noopener"><i class="bi bi-download me-1"></i> Unduh CV (PDF)</a>
+      </div>
     </div>
-  </div>
-
-  <section>
     <div class="container">
-      <h2>Pengalaman Proyek</h2>
+      <h3 class="h4 mb-3">Pengalaman Proyek</h3>
       <div class="timeline">
-        <div class="tl-item">
-          <span class="tl-date">Apr 2026 – Mei 2026</span>
-          <h3>Backend Developer &amp; Database Analyst</h3><p class="sub">Proyek Akademik</p>
-          <ul>
-            <li>Membangun "Del-Laundry Management System" dengan Java dan prinsip OOP.</li>
-            <li>Membuat sistem reservasi hotel berbasis Java dengan multithreading dan synchronized method untuk pemesanan bersamaan.</li>
-            <li>Merancang dan mengelola skema database relasional dengan PostgreSQL dan pgAdmin 4.</li>
-          </ul>
-        </div>
-        <div class="tl-item">
-          <span class="tl-date">Apr 2026 – Mei 2026</span>
-          <h3>Frontend, UI/UX &amp; Business Process</h3><p class="sub">UI/UX Designer &amp; Business Process Analyst (Proyek Akademik)</p>
-          <ul>
-            <li>Merancang layout UI/UX, wireframe high-fidelity, dan prototipe mobile interaktif aplikasi pelacak kesehatan di Figma.</li>
-            <li>Analisis Business Process Management dan optimasi alur kerja lewat Use Case &amp; Sequence Diagram.</li>
-            <li>Menerapkan styling dan layout web responsif dengan CSS.</li>
-          </ul>
-        </div>
-        <div class="tl-item">
-          <span class="tl-date">Apr 2026 – Mei 2026</span>
-          <h3>Systems Analyst &amp; Designer</h3><p class="sub">Proyek Akademik</p>
-          <ul>
-            <li>Mengerjakan proyek Analisis dan Perancangan Sistem dengan model Waterfall.</li>
-            <li>Memodelkan alur perangkat lunak: Use Case Diagram, Use Case Scenario, dan Sequence Diagram.</li>
-            <li>Menyusun skema database dan tata letak proses agar terintegrasi dengan backend.</li>
-          </ul>
-        </div>
+        <div class="tl-item"><span class="tl-date">Apr – Mei 2026</span><h4 class="h6">Backend Developer &amp; Database Analyst</h4><p class="sub">Proyek Akademik</p>
+          <p class="small mb-0">Del-Laundry Management System (Java OOP), sistem reservasi hotel dengan multithreading, dan skema PostgreSQL via pgAdmin 4.</p></div>
+        <div class="tl-item"><span class="tl-date">Apr – Mei 2026</span><h4 class="h6">Frontend, UI/UX &amp; Business Process</h4><p class="sub">UI/UX Designer &amp; Business Process Analyst</p>
+          <p class="small mb-0">Wireframe high-fidelity dan prototipe mobile di Figma, analisis BPM, Use Case &amp; Sequence Diagram, serta layout web responsif.</p></div>
+        <div class="tl-item"><span class="tl-date">Apr – Mei 2026</span><h4 class="h6">Systems Analyst &amp; Designer</h4><p class="sub">Proyek Akademik</p>
+          <p class="small mb-0">Model Waterfall, Use Case Diagram &amp; Scenario, Sequence Diagram, dan skema database yang terintegrasi dengan backend.</p></div>
       </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="container">
-      <h2>Organisasi</h2>
+      <h3 class="h4 mt-5 mb-3">Organisasi</h3>
       <div class="timeline">
-        <div class="tl-item">
-          <span class="tl-date">Mei 2026 – Sekarang</span>
-          <h3>Badan Eksekutif Mahasiswa (BEM) Institut Teknologi Del</h3><p class="sub">Anggota Divisi Multimedia</p>
-          <ul>
-            <li>Mendesain aset digital, banner, dan media promosi acara kampus dengan Canva dan Figma.</li>
-            <li>Mengedit video untuk media sosial resmi dengan CapCut.</li>
-            <li>Mendokumentasikan program kerja BEM dan mengelola logistik multimedia.</li>
-          </ul>
-        </div>
-        <div class="tl-item">
-          <span class="tl-date">Jan 2024 – Sekarang</span>
-          <h3>Paduan Suara Mahasiswa (PSM) Institut Teknologi Del</h3><p class="sub">Anggota Aktif / Penyanyi</p>
-          <ul>
-            <li>Tampil pada upacara institusi, acara kampus, dan kegiatan resmi universitas.</li>
-            <li>Melatih kerja tim, mendengarkan aktif, dan disiplin lewat latihan rutin.</li>
-          </ul>
-        </div>
+        <div class="tl-item"><span class="tl-date">Mei 2026 – Sekarang</span><h4 class="h6">BEM Institut Teknologi Del</h4><p class="sub">Anggota Divisi Multimedia</p>
+          <p class="small mb-0">Desain aset digital dan banner (Canva, Figma), edit video sosial media (CapCut), dokumentasi program kerja.</p></div>
+        <div class="tl-item"><span class="tl-date">Jan 2024 – Sekarang</span><h4 class="h6">Paduan Suara Mahasiswa (PSM) IT Del</h4><p class="sub">Anggota Aktif / Penyanyi</p>
+          <p class="small mb-0">Tampil di upacara institusi dan acara kampus; melatih kerja tim dan disiplin lewat latihan rutin.</p></div>
+      </div>
+      <h3 class="h4 mt-5 mb-3">Keterampilan Teknis</h3>
+      <div class="d-flex flex-wrap gap-2">
+        <span class="badge rounded-pill badge-tech">Java</span><span class="badge rounded-pill badge-tech">SQL</span><span class="badge rounded-pill badge-tech">PostgreSQL</span><span class="badge rounded-pill badge-tech">CSS</span>
+        <span class="badge rounded-pill badge-tech">Figma</span><span class="badge rounded-pill badge-tech">Canva</span><span class="badge rounded-pill badge-tech">CapCut</span><span class="badge rounded-pill badge-tech">MS Excel</span>
       </div>
     </div>
   </section>
 
-  <section>
+  <!-- LAYANAN -->
+  <section id="layanan" class="pb-5">
+    <div class="page-head"><div class="container"><h2>Layanan</h2><p class="mb-0">Hal-hal yang bisa saya bantu kerjakan.</p></div></div>
     <div class="container">
-      <h2>Keterampilan Teknis</h2>
-      <div class="tags">
-        <span class="tag">Java</span><span class="tag">SQL</span><span class="tag">PostgreSQL</span><span class="tag">CSS</span>
-        <span class="tag">Figma</span><span class="tag">Canva</span><span class="tag">CapCut</span><span class="tag">MS Excel</span>
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+        <div class="col"><article class="card card-del h-100"><div class="thumb" aria-hidden="true">🧩</div><div class="card-body"><h3 class="h6 card-title">Analisis &amp; Perancangan Sistem</h3><p class="card-text">SyRS/SRS, BPMN, Use Case, Class &amp; Sequence Diagram, DFD, dan ERD beserta kamus data.</p></div></article></div>
+        <div class="col"><article class="card card-del h-100"><div class="thumb" aria-hidden="true">💻</div><div class="card-body"><h3 class="h6 card-title">Pengembangan Backend Java</h3><p class="card-text">Aplikasi OOP: pewarisan, validasi data, multithreading, dan integrasi PostgreSQL.</p></div></article></div>
+        <div class="col"><article class="card card-del h-100"><div class="thumb" aria-hidden="true">🎨</div><div class="card-body"><h3 class="h6 card-title">Desain UI/UX</h3><p class="card-text">Wireframe, prototipe interaktif di Figma, dan styling web responsif.</p></div></article></div>
+        <div class="col"><article class="card card-del h-100"><div class="thumb" aria-hidden="true">🎬</div><div class="card-body"><h3 class="h6 card-title">Desain &amp; Multimedia</h3><p class="card-text">Banner, poster, media promosi (Canva/Figma), dan video singkat dengan CapCut.</p></div></article></div>
+      </div>
+      <div class="text-center mt-4"><a class="btn btn-del px-4" href="#kontak">Ajak saya berdiskusi</a></div>
+    </div>
+  </section>
+
+  <!-- PROYEK: kartu + modal dirender dari array (lihat script di bawah) -->
+  <section id="proyek" class="pb-5">
+    <div class="page-head"><div class="container"><h2>Detail Proyek</h2><p class="mb-0">Klik "Lihat Detail" untuk latar belakang, peran, dan hasil tiap proyek.</p></div></div>
+    <div class="container">
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="projectGrid"></div>
+      <h3 class="h4 mt-5 mb-3">Repositori GitHub</h3>
+      <div class="d-flex flex-wrap gap-2">
+        <a class="btn btn-del-outline btn-sm" target="_blank" rel="noopener" href="https://github.com/AryaSinambela/Perbankan"><i class="bi bi-github me-1"></i> Perbankan</a>
+        <a class="btn btn-del-outline btn-sm" target="_blank" rel="noopener" href="https://github.com/AryaSinambela/M02-Smart-Wallet-System-Advanced-OOP-Assignment-"><i class="bi bi-github me-1"></i> Smart Wallet System</a>
+        <a class="btn btn-del-outline btn-sm" target="_blank" rel="noopener" href="https://github.com/AryaSinambela/Proyek-PBO"><i class="bi bi-github me-1"></i> Proyek-PBO</a>
+        <a class="btn btn-del-outline btn-sm" target="_blank" rel="noopener" href="https://github.com/AryaSinambela/e-comerce"><i class="bi bi-github me-1"></i> e-comerce</a>
+        <a class="btn btn-del btn-sm" target="_blank" rel="noopener" href="https://github.com/AryaSinambela?tab=repositories">Semua repositori <i class="bi bi-arrow-right"></i></a>
       </div>
     </div>
   </section>
 
-  <!-- 4. LAYANAN -->
-  <div class="page-head" id="layanan">
+  <!-- KONTAK -->
+  <section id="kontak" class="pb-5">
+    <div class="page-head"><div class="container"><h2>Kontak</h2><p class="mb-0">Terbuka untuk diskusi, kolaborasi, dan peluang magang.</p></div></div>
     <div class="container">
-      <h1>Layanan</h1>
-      <p>Hal-hal yang bisa saya bantu kerjakan.</p>
-    </div>
-  </div>
-
-  <section>
-    <div class="container">
-      <div class="grid">
-        <div class="card lift"><div class="thumb">🧩</div><h3>Analisis &amp; Perancangan Sistem</h3>
-          <p>Penyusunan SyRS/SRS, pemodelan proses bisnis (BPMN), Use Case, Class &amp; Sequence Diagram, DFD, dan ERD beserta kamus data.</p></div>
-        <div class="card lift"><div class="thumb">💻</div><h3>Pengembangan Backend Java</h3>
-          <p>Aplikasi berbasis OOP: pewarisan, validasi data, multithreading, dan integrasi database PostgreSQL.</p></div>
-        <div class="card lift"><div class="thumb">🎨</div><h3>Desain UI/UX</h3>
-          <p>Wireframe, prototipe interaktif di Figma, dan styling web responsif dengan CSS.</p></div>
-        <div class="card lift"><div class="thumb">🎬</div><h3>Desain &amp; Multimedia</h3>
-          <p>Banner, poster, dan media promosi dengan Canva/Figma, serta penyuntingan video singkat dengan CapCut.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="container">
-      <h2>Cara Saya Bekerja</h2>
-      <div class="grid">
-        <div class="card"><h3>1. Pahami masalah</h3><p>Mulai dari pain point pengguna nyata dan alur kerja yang sedang berjalan.</p></div>
-        <div class="card"><h3>2. Rancang solusi</h3><p>Memodelkan proses, data, dan antarmuka sebelum menulis kode.</p></div>
-        <div class="card"><h3>3. Bangun &amp; uji</h3><p>Implementasi bertahap, lalu diverifikasi lewat pengujian dan evaluasi.</p></div>
-      </div>
-      <div class="btns"><a class="btn primary" href="#kontak">Ajak saya berdiskusi</a></div>
-    </div>
-  </section>
-
-  <!-- 5. PROYEK (Portfolio Details) -->
-  <div class="page-head" id="proyek">
-    <div class="container">
-      <h1>Detail Proyek</h1>
-      <p>Latar belakang, peran, dan hasil dari setiap proyek.</p>
-    </div>
-  </div>
-
-  <section>
-    <div class="container">
-
-      <article class="card project" id="titikmu">
-        <div class="thumb">🚌</div>
-        <h2>TitikMu: Aplikasi Tiket Transportasi Darat &amp; Air</h2>
-        <div class="meta"><div><b>Tahun</b>2025</div><div><b>Peran</b>Lead Developer</div><div><b>Jenis</b>Business Plan &amp; Desain Produk</div></div>
-        <p>Platform digital yang menyatukan pemesanan tiket bus dan kapal feri di Sumatera Utara, terutama kawasan Danau Toba, untuk menggantikan sistem loket yang terfragmentasi. Solusinya mencakup integrasi API real-time dengan operator (jadwal dan ketersediaan kursi) dan e-ticket berbasis QR untuk mencegah penipuan tiket.</p>
-        <p>Saya merancang modul "Tiket Saya", yang memisahkan perjalanan aktif dan selesai dengan aksi pesan ulang satu ketukan bagi pengguna yang paling sering memesan, yaitu mahasiswa dan komuter.</p>
-        <div class="tags"><span class="tag">Figma</span><span class="tag">Business Plan</span><span class="tag">UI/UX</span></div>
-        <div class="btns"><a class="btn ghost" target="_blank" rel="noopener" href="https://drive.google.com/file/d/1Vd0t66qwG6XlkLlHDsjk4eiQJgxp8Qvl/view?usp=sharing">Lihat Dokumen</a></div>
-      </article>
-
-      <article class="card project" id="antony-mart">
-        <div class="thumb">🛒</div>
-        <h2>Transformasi Digital Sistem Pemesanan Antony Mart (SyRS)</h2>
-        <div class="meta"><div><b>Tahun</b>2025</div><div><b>Tim</b>5 anggota</div><div><b>Mata kuliah</b>Analisis &amp; Perancangan Sistem</div></div>
-        <p>Sistem pemesanan manual berbasis kertas menyebabkan antrean panjang, pencatatan tidak konsisten, dan status pesanan yang tidak terlihat. Kami memodelkan sistem lama dan target dengan BPMN, Use Case, Class &amp; Sequence Diagram, Context Diagram, DFD level 1 dan 2, serta ERD dengan kamus data.</p>
-        <p>Kontribusi saya: merancang Use Case Diagram untuk pengguna (Mahasiswa dan Pegawai) dan menyusun Use Case Scenario untuk Login, Pemilihan Barang, Cek Stok, Checkout, dan Validasi Pembayaran, lengkap dengan alur sukses dan alur pengecualian.</p>
-        <div class="tags"><span class="tag">SyRS</span><span class="tag">BPMN</span><span class="tag">DFD</span><span class="tag">ERD</span></div>
-        <div class="btns"><a class="btn ghost" target="_blank" rel="noopener" href="https://drive.google.com/file/d/1wIXMAJdPt5yxrCMD_dfFZeovvKNrr0v7/view?usp=sharing">Lihat Dokumen</a></div>
-      </article>
-
-      <article class="card project" id="academic-record">
-        <div class="thumb">🎓</div>
-        <h2>Academic Record Management (Java OOP)</h2>
-        <div class="meta"><div><b>Tahun</b>2025</div><div><b>Teknologi</b>Java, HashMap</div><div><b>Hasil uji</b>100/100 (4 dari 4 test)</div></div>
-        <p>Sistem catatan akademik yang menerjemahkan aturan bisnis menjadi kode: hierarki kelas dengan superclass <code>Person</code> yang diturunkan ke <code>Student</code> dan <code>Lecturer</code>, serta driver yang memproses perintah berbasis delimiter (lecturer-add, course-add, student-add, enrollment-add, enrollment-grade, student-details).</p>
-        <p>Validasi duplikat berdasarkan email, NIM, dan kode mata kuliah. Nilai terakhir tiap mata kuliah disimpan dengan HashMap saat mata kuliah diulang, dan konversi nilai huruf (A–E) ke angka dipakai untuk menghitung IPK berbobot.</p>
-        <div class="tags"><span class="tag">Java</span><span class="tag">OOP</span><span class="tag">Inheritance</span><span class="tag">Validasi</span></div>
-        <div class="btns"><a class="btn ghost" target="_blank" rel="noopener" href="https://drive.google.com/drive/folders/11Go6Wizr7QzRp98mouuodW4w24AVilyU?usp=sharing">Lihat Folder Proyek</a></div>
-      </article>
-
-      <article class="card project" id="del-laundry">
-        <div class="thumb">🧺</div>
-        <h2>Del-Laundry Management System</h2>
-        <div class="meta"><div><b>Periode</b>Apr–Mei 2026</div><div><b>Peran</b>Backend &amp; Database</div><div><b>Teknologi</b>Java, PostgreSQL</div></div>
-        <p>Sistem manajemen laundry berbasis Java yang menerapkan prinsip OOP dengan skema database relasional di PostgreSQL (dikelola lewat pgAdmin 4) untuk menjaga integritas data.</p>
-        <div class="tags"><span class="tag">Java</span><span class="tag">PostgreSQL</span><span class="tag">pgAdmin 4</span></div>
-      </article>
-
-      <article class="card project" id="hotel">
-        <div class="thumb">🏨</div>
-        <h2>Sistem Reservasi Hotel</h2>
-        <div class="meta"><div><b>Periode</b>Apr–Mei 2026</div><div><b>Fokus</b>Concurrency</div><div><b>Teknologi</b>Java</div></div>
-        <p>Sistem reservasi berbasis Java yang memakai multithreading dan synchronized method agar pemesanan tamu yang berlangsung bersamaan tetap konsisten.</p>
-        <div class="tags"><span class="tag">Java</span><span class="tag">Multithreading</span></div>
-      </article>
-
-      <article class="card project" id="health-app">
-        <div class="thumb">📱</div>
-        <h2>Desain UI/UX Aplikasi Pelacak Kesehatan</h2>
-        <div class="meta"><div><b>Periode</b>Apr–Mei 2026</div><div><b>Peran</b>UI/UX &amp; Business Process</div><div><b>Tools</b>Figma</div></div>
-        <p>Layout UI/UX, wireframe high-fidelity, dan prototipe mobile interaktif di Figma, didukung analisis proses bisnis dan Use Case &amp; Sequence Diagram.</p>
-        <div class="tags"><span class="tag">Figma</span><span class="tag">BPM</span><span class="tag">Wireframe</span></div>
-      </article>
-
-      <h2 style="margin-top:2.5rem">Repositori GitHub</h2>
-      <div class="grid">
-        <a class="card" target="_blank" rel="noopener" href="https://github.com/AryaSinambela/Perbankan"><h3>Perbankan</h3><p>Aplikasi sistem perbankan sederhana dengan Java untuk mengelola saldo dan transaksi.</p><div class="tags"><span class="tag">Java</span></div></a>
-        <a class="card" target="_blank" rel="noopener" href="https://github.com/AryaSinambela/M02-Smart-Wallet-System-Advanced-OOP-Assignment-"><h3>Smart Wallet System</h3><p>Tugas Advanced OOP: sistem dompet digital.</p><div class="tags"><span class="tag">Java</span></div></a>
-        <a class="card" target="_blank" rel="noopener" href="https://github.com/AryaSinambela/Proyek-PBO"><h3>Proyek-PBO</h3><p>Proyek mata kuliah Pemrograman Berorientasi Objek.</p><div class="tags"><span class="tag">Java</span></div></a>
-        <a class="card" target="_blank" rel="noopener" href="https://github.com/AryaSinambela/e-comerce"><h3>e-comerce</h3><p>Proyek tampilan web e-commerce.</p><div class="tags"><span class="tag">CSS</span></div></a>
-      </div>
-      <div class="btns"><a class="btn primary" target="_blank" rel="noopener" href="https://github.com/AryaSinambela?tab=repositories">Semua repositori →</a></div>
-
-    </div>
-  </section>
-
-  <!-- 6. KONTAK -->
-  <div class="page-head" id="kontak">
-    <div class="container">
-      <h1>Kontak</h1>
-      <p>Terbuka untuk diskusi, kolaborasi, dan peluang magang.</p>
-    </div>
-  </div>
-
-  <section>
-    <div class="container">
-      <div class="grid">
-        <div class="card">
-          <h3>Hubungi saya</h3><br>
-          <p>📧 <a href="mailto:aryasinambela26@gmail.com"><b>aryasinambela26@gmail.com</b></a></p>
-          <p>💬 <a href="https://wa.me/6285260168713" target="_blank" rel="noopener"><b>WhatsApp: +62 852 6016 8713</b></a></p>
-          <p>📍 Sumatera Utara, Indonesia</p><br>
-          <div class="tags">
-            <a class="tag" href="https://www.linkedin.com/in/arya-pratama-sinambela" target="_blank" rel="noopener">LinkedIn</a>
-            <a class="tag" href="https://github.com/AryaSinambela" target="_blank" rel="noopener">GitHub</a>
-            <a class="tag" href="https://www.instagram.com/arya_sinambela" target="_blank" rel="noopener">Instagram</a>
-            <a class="tag" href="https://www.youtube.com/@aryasinambela1918" target="_blank" rel="noopener">YouTube</a>
-            <a class="tag" href="https://www.tiktok.com/@aryasinambela_26" target="_blank" rel="noopener">TikTok</a>
-          </div>
+      <div class="row g-4">
+        <div class="col-lg-5">
+          <div class="card card-del h-100"><div class="card-body">
+            <h3 class="h5 card-title mb-3">Hubungi saya</h3>
+            <address class="mb-3">
+              <p><i class="bi bi-envelope me-2"></i><a href="mailto:aryasinambela26@gmail.com">aryasinambela26@gmail.com</a></p>
+              <p><i class="bi bi-whatsapp me-2"></i><a href="https://wa.me/6285260168713" target="_blank" rel="noopener">+62 852 6016 8713</a></p>
+              <p class="mb-0"><i class="bi bi-geo-alt me-2"></i>Sumatera Utara, Indonesia</p>
+            </address>
+            <div class="d-flex flex-wrap gap-2">
+              <a class="btn btn-del-outline btn-sm" href="https://www.linkedin.com/in/arya-pratama-sinambela" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+              <a class="btn btn-del-outline btn-sm" href="https://github.com/AryaSinambela" target="_blank" rel="noopener" aria-label="GitHub"><i class="bi bi-github"></i></a>
+              <a class="btn btn-del-outline btn-sm" href="https://www.instagram.com/arya_sinambela" target="_blank" rel="noopener" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+              <a class="btn btn-del-outline btn-sm" href="https://www.youtube.com/@aryasinambela1918" target="_blank" rel="noopener" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+              <a class="btn btn-del-outline btn-sm" href="https://www.tiktok.com/@aryasinambela_26" target="_blank" rel="noopener" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+            </div>
+          </div></div>
         </div>
 
-        <div class="card">
-          <h3>Kirim pesan</h3><br>
-          <form action="mailto:aryasinambela26@gmail.com" method="post" enctype="text/plain">
-            <input type="text" name="Nama" placeholder="Nama kamu" required>
-            <input type="email" name="Email" placeholder="Email kamu" required>
-            <textarea name="Pesan" rows="5" placeholder="Tulis pesan..." required></textarea>
-            <button class="btn primary" type="submit">Kirim</button>
-          </form>
+        <div class="col-lg-7">
+          <div class="card card-del h-100"><div class="card-body">
+            <h3 class="h5 card-title mb-3">Kirim pesan</h3>
+            <form id="serviceForm" novalidate>
+              <div class="mb-3">
+                <div class="input-group has-validation">
+                  <span class="input-group-text"><i class="bi bi-person"></i></span>
+                  <div class="form-floating">
+                    <input type="text" class="form-control" id="nama" name="nama" placeholder="Nama lengkap" minlength="3" required>
+                    <label for="nama">Nama lengkap *</label>
+                  </div>
+                  <div class="invalid-feedback">Nama wajib diisi (minimal 3 karakter).</div>
+                  <div class="valid-feedback">Terlihat baik!</div>
+                </div>
+              </div>
+              <div class="mb-3">
+                <div class="input-group has-validation">
+                  <span class="input-group-text"><i class="bi bi-envelope"></i></span>
+                  <div class="form-floating">
+                    <input type="email" class="form-control" id="email" name="email" placeholder="nama@del.ac.id" required>
+                    <label for="email">Alamat email *</label>
+                  </div>
+                  <div class="invalid-feedback">Alamat email valid wajib disertakan.</div>
+                  <div class="valid-feedback">Email valid.</div>
+                </div>
+              </div>
+              <div class="mb-3">
+                <div class="form-floating">
+                  <select class="form-select" id="kategori" name="kategori" required>
+                    <option value="" selected disabled>Pilih kategori…</option>
+                    <option>Analisis &amp; Perancangan Sistem</option>
+                    <option>Pengembangan Backend Java</option>
+                    <option>Desain UI/UX</option>
+                    <option>Desain &amp; Multimedia</option>
+                    <option>Lainnya</option>
+                  </select>
+                  <label for="kategori">Kategori layanan *</label>
+                </div>
+                <div class="invalid-feedback">Pilih salah satu kategori.</div>
+                <div class="valid-feedback">Kategori dipilih.</div>
+              </div>
+              <div class="mb-3">
+                <div class="form-floating">
+                  <textarea class="form-control" id="pesan" name="pesan" placeholder="Tulis pesan" style="height:120px" minlength="10" required></textarea>
+                  <label for="pesan">Pesan *</label>
+                </div>
+                <div class="invalid-feedback">Pesan minimal 10 karakter.</div>
+                <div class="valid-feedback">Siap dikirim.</div>
+              </div>
+              <div class="form-check mb-3">
+                <input class="form-check-input" type="checkbox" id="setuju" required>
+                <label class="form-check-label" for="setuju">Saya menyetujui syarat &amp; ketentuan penggunaan data untuk keperluan komunikasi ini.</label>
+                <div class="invalid-feedback">Anda harus menyetujui sebelum mengirim.</div>
+              </div>
+              <button class="btn btn-del px-4" type="submit"><i class="bi bi-send me-1"></i> Kirim</button>
+            </form>
+          </div></div>
         </div>
       </div>
     </div>
@@ -350,36 +254,120 @@
 
 </main>
 
-<footer>
-  <div class="container foot">
-    <p>© 2026 Arya Pratama Sinambela · Institut Teknologi Del</p>
-    <p><a href="https://github.com/AryaSinambela">GitHub</a> · <a href="https://www.linkedin.com/in/arya-pratama-sinambela">LinkedIn</a> · <a href="https://www.instagram.com/arya_sinambela">Instagram</a></p>
+<footer class="py-4">
+  <div class="container d-flex flex-wrap justify-content-between gap-2">
+    <p class="mb-0">© 2026 Arya Pratama Sinambela · Institut Teknologi Del</p>
+    <p class="mb-0"><a href="https://github.com/AryaSinambela">GitHub</a> · <a href="https://www.linkedin.com/in/arya-pratama-sinambela">LinkedIn</a> · <a href="https://www.instagram.com/arya_sinambela">Instagram</a></p>
   </div>
 </footer>
 
-<!-- Skrip Opsional untuk Active State Navigasi saat Scroll -->
+<div id="modalHost"></div>
+
+<!-- Bootstrap JS Bundle (sudah termasuk Popper) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script>
-  const sections = document.querySelectorAll('section, .page-head');
-  const navLinks = document.querySelectorAll('header nav ul li a');
+/* ===== Data proyek → kartu grid + modal detail ===== */
+const projects = [
+  { id:'titikmu', icon:'🚌', title:'TitikMu',
+    short:'Business plan dan desain produk aplikasi tiket bus & feri Sumatera Utara.',
+    meta:{Tahun:'2025', Peran:'Lead Developer', Jenis:'Business Plan & Desain Produk'},
+    long:['Platform digital yang menyatukan pemesanan tiket bus dan kapal feri di Sumatera Utara, terutama kawasan Danau Toba, untuk menggantikan sistem loket yang terfragmentasi. Solusinya mencakup integrasi API real-time dengan operator (jadwal dan ketersediaan kursi) dan e-ticket berbasis QR untuk mencegah penipuan tiket.',
+          'Saya merancang modul "Tiket Saya", yang memisahkan perjalanan aktif dan selesai dengan aksi pesan ulang satu ketukan bagi pengguna yang paling sering memesan, yaitu mahasiswa dan komuter.'],
+    tags:['Figma','Business Plan','UI/UX'],
+    link:['https://drive.google.com/file/d/1Vd0t66qwG6XlkLlHDsjk4eiQJgxp8Qvl/view?usp=sharing','Lihat Dokumen'] },
+  { id:'antony-mart', icon:'🛒', title:'Antony Mart SyRS',
+    short:'Transformasi digital sistem pemesanan manual menjadi sistem terspesifikasi lengkap.',
+    meta:{Tahun:'2025', Tim:'5 anggota', 'Mata kuliah':'Analisis & Perancangan Sistem'},
+    long:['Sistem pemesanan manual berbasis kertas menyebabkan antrean panjang, pencatatan tidak konsisten, dan status pesanan yang tidak terlihat. Kami memodelkan sistem lama dan target dengan BPMN, Use Case, Class & Sequence Diagram, Context Diagram, DFD level 1 dan 2, serta ERD dengan kamus data.',
+          'Kontribusi saya: merancang Use Case Diagram untuk pengguna (Mahasiswa dan Pegawai) dan menyusun Use Case Scenario untuk Login, Pemilihan Barang, Cek Stok, Checkout, dan Validasi Pembayaran, lengkap dengan alur sukses dan alur pengecualian.'],
+    tags:['SyRS','BPMN','DFD','ERD'],
+    link:['https://drive.google.com/file/d/1wIXMAJdPt5yxrCMD_dfFZeovvKNrr0v7/view?usp=sharing','Lihat Dokumen'] },
+  { id:'academic-record', icon:'🎓', title:'Academic Record Management',
+    short:'Sistem catatan akademik Java OOP dengan validasi dan perhitungan IPK.',
+    meta:{Tahun:'2025', Teknologi:'Java, HashMap', 'Hasil uji':'100/100 (4 dari 4 test)'},
+    long:['Hierarki kelas dengan superclass <code>Person</code> yang diturunkan ke <code>Student</code> dan <code>Lecturer</code>, serta driver yang memproses perintah berbasis delimiter (lecturer-add, course-add, student-add, enrollment-add, enrollment-grade, student-details).',
+          'Validasi duplikat berdasarkan email, NIM, dan kode mata kuliah. Nilai terakhir tiap mata kuliah disimpan dengan HashMap saat mata kuliah diulang, dan konversi nilai huruf (A–E) ke angka dipakai untuk menghitung IPK berbobot.'],
+    tags:['Java','OOP','Inheritance','Validasi'],
+    link:['https://drive.google.com/drive/folders/11Go6Wizr7QzRp98mouuodW4w24AVilyU?usp=sharing','Lihat Folder Proyek'] },
+  { id:'del-laundry', icon:'🧺', title:'Del-Laundry Management System',
+    short:'Sistem manajemen laundry Java dengan database relasional PostgreSQL.',
+    meta:{Periode:'Apr–Mei 2026', Peran:'Backend & Database', Teknologi:'Java, PostgreSQL'},
+    long:['Sistem manajemen laundry berbasis Java yang menerapkan prinsip OOP dengan skema database relasional di PostgreSQL (dikelola lewat pgAdmin 4) untuk menjaga integritas data.'],
+    tags:['Java','PostgreSQL','pgAdmin 4'] },
+  { id:'hotel', icon:'🏨', title:'Sistem Reservasi Hotel',
+    short:'Reservasi berbasis Java dengan multithreading untuk pemesanan bersamaan.',
+    meta:{Periode:'Apr–Mei 2026', Fokus:'Concurrency', Teknologi:'Java'},
+    long:['Sistem reservasi berbasis Java yang memakai multithreading dan synchronized method agar pemesanan tamu yang berlangsung bersamaan tetap konsisten.'],
+    tags:['Java','Multithreading'] },
+  { id:'health-app', icon:'📱', title:'UI/UX Aplikasi Pelacak Kesehatan',
+    short:'Wireframe high-fidelity dan prototipe mobile interaktif di Figma.',
+    meta:{Periode:'Apr–Mei 2026', Peran:'UI/UX & Business Process', Tools:'Figma'},
+    long:['Layout UI/UX, wireframe high-fidelity, dan prototipe mobile interaktif di Figma, didukung analisis proses bisnis serta Use Case & Sequence Diagram.'],
+    tags:['Figma','BPM','Wireframe'] }
+];
 
-  window.addEventListener('scroll', () => {
-    let current = '';
-    sections.forEach(section => {
-      const sectionTop = section.offsetTop;
-      const sectionHeight = section.clientHeight;
-      if (pageYOffset >= (sectionTop - 150)) {
-        current = section.getAttribute('id');
-      }
-    });
+const badges = tags => tags.map(t => `<span class="badge rounded-pill badge-tech">${t}</span>`).join('');
 
-    navLinks.forEach(link => {
-      link.classList.remove('active');
-      if (link.getAttribute('href') === `#${current}`) {
-        link.classList.add('active');
-      }
-    });
+document.getElementById('projectGrid').innerHTML = projects.map(p => `
+  <div class="col">
+    <article class="card card-del h-100">
+      <div class="thumb" aria-hidden="true">${p.icon}</div>
+      <div class="card-body d-flex flex-column">
+        <h3 class="h5 card-title">${p.title}</h3>
+        <p class="card-text">${p.short}</p>
+        <div class="d-flex flex-wrap gap-1 mb-3">${badges(p.tags)}</div>
+        <button type="button" class="btn btn-del btn-sm mt-auto align-self-start" data-bs-toggle="modal" data-bs-target="#modal-${p.id}">Lihat Detail</button>
+      </div>
+    </article>
+  </div>`).join('');
+
+document.getElementById('modalHost').innerHTML = projects.map(p => `
+  <div class="modal fade" id="modal-${p.id}" tabindex="-1" aria-labelledby="label-${p.id}" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title h5" id="label-${p.id}">${p.icon} ${p.title}</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row g-2 mb-3">${Object.entries(p.meta).map(([k,v]) => `<div class="col-sm-4"><div class="meta-item"><b>${k}</b>${v}</div></div>`).join('')}</div>
+          ${p.long.map(t => `<p>${t}</p>`).join('')}
+          <div class="d-flex flex-wrap gap-1">${badges(p.tags)}</div>
+        </div>
+        <div class="modal-footer">
+          ${p.link ? `<a class="btn btn-del-outline btn-sm" target="_blank" rel="noopener" href="${p.link[0]}">${p.link[1]}</a>` : ''}
+          <button type="button" class="btn btn-del btn-sm" data-bs-dismiss="modal">Tutup</button>
+        </div>
+      </div>
+    </div>
+  </div>`).join('');
+
+/* ===== Tutup menu hamburger setelah link diklik (mobile) ===== */
+document.querySelectorAll('#mainNavbar .nav-link').forEach(link =>
+  link.addEventListener('click', () => bootstrap.Collapse.getInstance('#mainNavbar')?.hide()));
+
+/* ===== Validasi formulir dengan umpan balik visual Bootstrap ===== */
+const form = document.getElementById('serviceForm');
+const mark = el => {
+  const ok = el.checkValidity();
+  [el, el.closest('.form-floating')].forEach(node => {
+    if (!node) return;
+    node.classList.toggle('is-valid', ok);
+    node.classList.toggle('is-invalid', !ok);
   });
+};
+form.addEventListener('input',  e => mark(e.target));
+form.addEventListener('change', e => mark(e.target));
+form.addEventListener('submit', e => {
+  e.preventDefault();
+  form.querySelectorAll('input, select, textarea').forEach(mark);
+  if (!form.checkValidity()) return;
+  const d = new FormData(form);
+  // GitHub Pages tidak punya server → buka aplikasi email dengan isi terisi
+  location.href = 'mailto:aryasinambela26@gmail.com'
+    + '?subject=' + encodeURIComponent(`[${d.get('kategori')}] Pesan dari ${d.get('nama')}`)
+    + '&body=' + encodeURIComponent(`${d.get('pesan')}\n\nEmail: ${d.get('email')}`);
+});
 </script>
-
 </body>
 </html>

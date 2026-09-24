@@ -1,84 +1,151 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
-:root{--navy:#2b2554;--navy-2:#3a3370;--amber:#ffb957;--ink:#221f1e;--muted:#6b6878;--paper:#f6f5f1;--card:#fff;--line:#e4e1d8;--radius:16px}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:'Poppins',system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.7}
-a{color:inherit;text-decoration:none}
-img{max-width:100%;display:block}
-.container{width:min(1100px,92%);margin-inline:auto}
+/* Dimuat SETELAH Bootstrap. Zero !important: semua override lewat variabel & urutan cascade. */
 
-/* Header */
-header{position:sticky;top:0;z-index:10;background:rgba(246,245,241,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
-.nav{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:.9rem 0;flex-wrap:wrap}
-.logo{font-weight:800;color:var(--navy)}
-.logo span{color:var(--amber)}
-.nav ul{list-style:none;display:flex;gap:.25rem;flex-wrap:wrap}
-.nav a{display:block;padding:.4rem .85rem;border-radius:999px;font-size:.9rem;font-weight:500}
-.nav a:hover{background:#ebe8de}
-.nav a.active{background:var(--navy);color:#fff}
+/* 1. CSS Custom Properties (tema navy–amber) + override variabel Bootstrap */
+:root {
+  --navy: #2b2554;
+  --navy-2: #3a3370;
+  --amber: #ffb957;
+  --ink: #221f1e;
+  --muted: #6b6878;
+  --paper: #f6f5f1;
+  --line: #e4e1d8;
+  --radius: 16px;
+  --shadow-lift: 0 12px 28px rgba(43, 37, 84, .12);
 
-/* Hero */
-.hero{padding:4rem 0 2rem}
-.hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:3rem;align-items:center}
-.hero h1{font-size:clamp(2rem,5vw,3.4rem);line-height:1.15;font-weight:800}
-.hero h1 em{font-style:normal;background:linear-gradient(transparent 62%,var(--amber) 62%)}
-.role{color:var(--muted);font-style:italic;margin:.6rem 0 1rem}
-.photo{position:relative;justify-self:center}
-.photo::before{content:"";position:absolute;width:70%;aspect-ratio:1;background:var(--amber);border-radius:50%;top:-6%;right:-14%}
-.photo img{position:relative;width:min(300px,70vw);aspect-ratio:3/4;object-fit:cover;border-radius:999px;border:6px solid var(--navy);background:#ddd}
+  --bs-body-font-family: 'Poppins', system-ui, sans-serif;
+  --bs-body-bg: var(--paper);
+  --bs-body-color: var(--ink);
+  --bs-body-line-height: 1.7;
+  --bs-link-color-rgb: 43, 37, 84;
+  --bs-link-hover-color-rgb: 43, 37, 84;
+}
 
-/* Buttons */
-.btns{display:flex;gap:.75rem;flex-wrap:wrap;margin-top:1.5rem}
-.btn{display:inline-block;padding:.7rem 1.4rem;border-radius:999px;font-weight:600;font-size:.92rem;border:2px solid var(--navy);cursor:pointer;font-family:inherit;transition:.2s}
-.btn.primary{background:var(--navy);color:#fff}
-.btn.primary:hover{background:var(--amber);border-color:var(--amber);color:var(--ink)}
-.btn.ghost{background:transparent;color:var(--navy)}
-.btn.ghost:hover{background:var(--navy);color:#fff}
+h1, h2 { font-weight: 800; }
+h3, h4, h5, h6 { font-weight: 700; }
+h2 { color: var(--navy); font-size: clamp(1.5rem, 3vw, 2.1rem); margin-bottom: 1.4rem; }
+h3.h4 { color: var(--navy); }
+section[id] { scroll-margin-top: 64px; }
+address p { margin-bottom: .4rem; }
 
-/* Sections */
-section{padding:2.5rem 0}
-.eyebrow{display:inline-block;background:var(--amber);font-weight:700;font-size:.8rem;border-radius:999px;padding:.15rem .8rem;margin-bottom:.6rem}
-h2{font-size:clamp(1.5rem,3vw,2.1rem);font-weight:800;margin-bottom:1.4rem;color:var(--navy)}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.25rem}
-.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:1.4rem;transition:.2s}
-a.card:hover,.lift:hover{transform:translateY(-4px);box-shadow:0 12px 28px rgba(43,37,84,.12)}
-.card h3{font-size:1.05rem;margin-bottom:.4rem}
-.card p,.card li{color:var(--muted);font-size:.93rem}
-.card ul{margin-left:1.1rem}
-.thumb{height:130px;border-radius:12px;margin-bottom:1rem;display:grid;place-items:center;font-size:2.4rem;background:linear-gradient(135deg,var(--navy),var(--navy-2))}
-.tags{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:.8rem}
-.tag{font-size:.75rem;font-weight:600;padding:.2rem .7rem;border-radius:999px;background:#ece9f8;color:var(--navy)}
+/* 2. Navbar */
+.navbar-del {
+  --bs-navbar-color: var(--ink);
+  --bs-navbar-hover-color: var(--navy);
+  --bs-navbar-active-color: #fff;
+  --bs-navbar-brand-color: var(--navy);
+  --bs-navbar-brand-hover-color: var(--navy);
+  background: rgba(246, 245, 241, .92);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--line);
+}
+.navbar-del .navbar-brand { font-weight: 800; }
+.navbar-del .navbar-brand span { color: var(--amber); }
+.navbar-del .navbar-nav .nav-link {
+  padding: .4rem .85rem; border-radius: 999px; font-size: .9rem; font-weight: 500;
+  transition: background-color .2s ease, color .2s ease;
+}
+.navbar-del .navbar-nav .nav-link:hover { background: #ebe8de; }
+.navbar-del .navbar-nav .nav-link.active { background: var(--navy); }
 
-/* Timeline */
-.timeline{border-left:3px solid var(--amber);padding-left:1.5rem;display:grid;gap:1.6rem;margin-left:.5rem}
-.tl-item{position:relative}
-.tl-item::before{content:"";position:absolute;left:calc(-1.5rem - 10px);top:.4rem;width:15px;height:15px;border-radius:50%;background:var(--navy);border:3px solid var(--paper)}
-.tl-date{font-size:.8rem;font-weight:600;color:var(--navy)}
-.tl-item h3{font-size:1.05rem}
-.sub{color:var(--muted);font-style:italic;font-size:.9rem}
-.tl-item ul{margin:.5rem 0 0 1.1rem;color:#444;font-size:.93rem}
+/* 3. Hero */
+.hero { overflow-x: clip; }
+.hero h1 { font-size: clamp(2rem, 5vw, 3.4rem); line-height: 1.15; }
+.hero h1 em { font-style: normal; background: linear-gradient(transparent 62%, var(--amber) 62%); }
+.role { color: var(--muted); font-style: italic; }
+.photo { position: relative; display: inline-block; }
+.photo::before {
+  content: ""; position: absolute; width: 70%; aspect-ratio: 1;
+  background: var(--amber); border-radius: 50%; top: -6%; right: -14%;
+}
+.photo img {
+  position: relative; width: min(300px, 70vw); aspect-ratio: 3 / 4; object-fit: cover;
+  border-radius: 999px; border: 6px solid var(--navy); background: #ddd;
+}
+.eyebrow { --bs-badge-color: var(--ink); background: var(--amber); font-weight: 700; font-size: .8rem; }
 
-/* Page header (halaman dalam) */
-.page-head{background:var(--navy);color:#fff;padding:3rem 0;position:relative;overflow:hidden}
-.page-head::after{content:"";position:absolute;right:-60px;top:-60px;width:220px;height:220px;border-radius:50%;background:var(--amber)}
-.page-head h1{font-size:clamp(1.8rem,4vw,2.6rem);font-weight:800;position:relative;z-index:1}
-.page-head p{opacity:.85;position:relative;z-index:1}
+/* 4. Tombol (ditimpa lewat variabel bawaan Bootstrap) */
+.btn-del, .btn-del-outline, .btn-amber {
+  --bs-btn-font-weight: 600;
+  --bs-btn-border-radius: 999px;
+  --bs-btn-focus-shadow-rgb: 255, 185, 87;
+  transition: background-color .2s ease, color .2s ease, border-color .2s ease, transform .2s ease;
+}
+.btn-del {
+  --bs-btn-color: #fff; --bs-btn-bg: var(--navy); --bs-btn-border-color: var(--navy);
+  --bs-btn-hover-color: var(--ink); --bs-btn-hover-bg: var(--amber); --bs-btn-hover-border-color: var(--amber);
+  --bs-btn-active-color: var(--ink); --bs-btn-active-bg: var(--amber); --bs-btn-active-border-color: var(--amber);
+}
+.btn-del-outline {
+  --bs-btn-color: var(--navy); --bs-btn-bg: transparent; --bs-btn-border-color: var(--navy);
+  --bs-btn-hover-color: #fff; --bs-btn-hover-bg: var(--navy); --bs-btn-hover-border-color: var(--navy);
+  --bs-btn-active-color: #fff; --bs-btn-active-bg: var(--navy); --bs-btn-active-border-color: var(--navy);
+}
+.btn-amber {
+  --bs-btn-color: var(--ink); --bs-btn-bg: var(--amber); --bs-btn-border-color: var(--amber);
+  --bs-btn-hover-color: var(--navy); --bs-btn-hover-bg: #fff; --bs-btn-hover-border-color: #fff;
+  --bs-btn-active-color: var(--navy); --bs-btn-active-bg: #fff; --bs-btn-active-border-color: #fff;
+}
+.btn-del:hover, .btn-del-outline:hover { transform: translateY(-2px); }
 
-/* Detail proyek */
-.project{scroll-margin-top:5rem;margin-bottom:1.5rem}
-.project h2{margin-bottom:.5rem;font-size:1.5rem}
-.meta{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:.8rem;margin:1rem 0}
-.meta div{background:#f0eee6;border-radius:12px;padding:.7rem 1rem;font-size:.85rem}
-.meta b{display:block;color:var(--navy)}
+/* 5. Kartu, thumbnail, badge */
+.card-del {
+  --bs-card-border-color: var(--line);
+  --bs-card-border-radius: var(--radius);
+  --bs-card-inner-border-radius: calc(var(--radius) - 1px);
+  --bs-card-title-color: var(--navy);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.card-del:is(:hover, :focus-within) { transform: translateY(-4px); box-shadow: var(--shadow-lift); }
+.card-del .card-text { color: var(--muted); font-size: .93rem; }
+.thumb {
+  height: 130px; display: grid; place-items: center; font-size: 2.4rem;
+  background: linear-gradient(135deg, var(--navy), var(--navy-2));
+  border-radius: calc(var(--radius) - 1px) calc(var(--radius) - 1px) 0 0;
+}
+.badge-tech { --bs-badge-color: var(--navy); background: #ece9f8; font-weight: 600; font-size: .75rem; }
 
-/* Form */
-form{display:grid;gap:1rem}
-input,textarea{font:inherit;padding:.8rem 1rem;border:1px solid var(--line);border-radius:12px;background:#fff;width:100%}
-input:focus,textarea:focus{outline:2px solid var(--amber);border-color:var(--amber)}
+/* 6. Timeline (kombinator > dan +, :nth-child) */
+.timeline { border-left: 3px solid var(--amber); padding-left: 1.5rem; margin-left: .5rem; }
+.timeline > .tl-item { position: relative; }
+.timeline > .tl-item + .tl-item { margin-top: 1.6rem; }
+.timeline > .tl-item::before {
+  content: ""; position: absolute; left: calc(-1.5rem - 10px); top: .4rem;
+  width: 15px; height: 15px; border-radius: 50%; border: 3px solid var(--paper);
+}
+.timeline > .tl-item:nth-child(odd)::before  { background: var(--navy); }
+.timeline > .tl-item:nth-child(even)::before { background: var(--amber); }
+.tl-date { font-size: .8rem; font-weight: 600; color: var(--navy); }
+.sub { color: var(--muted); font-style: italic; font-size: .9rem; margin-bottom: .3rem; }
 
-/* Footer */
-footer{background:var(--navy);color:#dcd9ee;padding:1.6rem 0;margin-top:3rem;font-size:.88rem}
-.foot{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
-footer a:hover{color:var(--amber)}
+/* 7. Header bagian */
+.page-head { background: var(--navy); color: #fff; padding: 2.5rem 0; position: relative; overflow: hidden; margin-bottom: 2rem; }
+.page-head::after {
+  content: ""; position: absolute; right: -60px; top: -60px;
+  width: 220px; height: 220px; border-radius: 50%; background: var(--amber);
+}
+.page-head .container { position: relative; z-index: 1; }
+.page-head h2 { color: #fff; margin-bottom: .4rem; }
+.page-head p { opacity: .85; }
 
-@media(max-width:800px){.hero-grid{grid-template-columns:1fr}.photo{order:-1}}
+/* 8. Modal & meta */
+.modal-content { border-radius: var(--radius); border: 0; }
+.modal-title { color: var(--navy); }
+.meta-item { background: #f0eee6; border-radius: 12px; padding: .6rem 1rem; font-size: .85rem; height: 100%; }
+.meta-item b { display: block; color: var(--navy); }
+
+/* 9. Formulir */
+.input-group-text { background: #f0eee6; color: var(--navy); border-color: var(--line); transition: background-color .2s ease; }
+.input-group:focus-within .input-group-text { background: var(--amber); border-color: var(--amber); color: var(--ink); }
+.form-control:focus, .form-select:focus { border-color: var(--amber); box-shadow: 0 0 0 .25rem rgba(255, 185, 87, .35); }
+.form-check-input:checked { background-color: var(--navy); border-color: var(--navy); }
+.form-check-input:focus { border-color: var(--amber); box-shadow: 0 0 0 .25rem rgba(255, 185, 87, .35); }
+
+/* 10. Footer */
+footer { background: var(--navy); color: #dcd9ee; font-size: .88rem; }
+footer a { color: inherit; transition: color .2s ease; }
+footer a:hover { color: var(--amber); }
+
+@media (prefers-reduced-motion: reduce) {
+  .card-del, .btn-del, .btn-del-outline { transition: none; }
+  .card-del:is(:hover, :focus-within), .btn-del:hover, .btn-del-outline:hover { transform: none; }
+}
